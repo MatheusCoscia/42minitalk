@@ -6,7 +6,7 @@
 /*   By: matrodri <matrodri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 10:10:30 by matrodri          #+#    #+#             */
-/*   Updated: 2021/10/22 21:01:06 by matrodri         ###   ########.fr       */
+/*   Updated: 2021/10/26 21:16:19 by matrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,9 @@ void	invalid(void)
 	exit(0);
 }
 
-void	sucess(int sig)
-{
-	(void)sig;
-	write(1, "your menssage has been sent\n", 28);
-	exit(0);
-}
-
 void	get_pid(void)
 {
-	char *pid;
+	char	*pid;
 
 	pid = ft_itoa(getpid());
 	write(2, "server pid: ", 12);

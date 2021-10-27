@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_callo.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matrodri <matrodri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 17:12:44 by matrodri          #+#    #+#             */
-/*   Updated: 2021/10/21 14:57:44 by matrodri         ###   ########.fr       */
+/*   Updated: 2021/10/26 21:18:47 by matrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	ft_bzero(void *s, size_t n)
 	ft_memset(s, '\0', n);
 }
 
-void	*ft_callo(size_t memb, size_t size)
+void	*ft_calloc(size_t memb, size_t size)
 {
 	 int	*i;
 

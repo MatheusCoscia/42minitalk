@@ -6,7 +6,7 @@
 /*   By: matrodri <matrodri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 09:59:24 by matrodri          #+#    #+#             */
-/*   Updated: 2021/10/22 20:31:07 by matrodri         ###   ########.fr       */
+/*   Updated: 2021/10/26 21:24:29 by matrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,17 @@ static void	send_msg(pid_t pid, char *msg)
 {
 	u_int8_t	byte;
 
-	while(*msg)
+	while (*msg)
 	{
 		byte = 0;
 		while (byte < 8)
 		{
-			signal(SIGUSR1, sucess);
-			if ((*msg & (128 >> byte)) != 0)
+			if (*msg & (128 >> byte))
 				kill(pid, SIGUSR1);
 			else
 				kill(pid, SIGUSR2);
-			usleep(600);
 			byte++;
+			usleep(2000);
 		}
 		msg++;
 	}
@@ -39,7 +38,6 @@ int	main(int argc, char **argv)
 		how_to_use();
 	if (ft_atoi(argv[1]) < 3)
 		invalid();
-	signal(SIGUSR1, sucess);
 	send_msg(ft_atoi(argv[1]), argv[2]);
 	return (0);
 }

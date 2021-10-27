@@ -6,7 +6,7 @@
 #    By: matrodri <matrodri@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/21 12:41:17 by matrodri          #+#    #+#              #
-#    Updated: 2021/10/22 16:19:09 by matrodri         ###   ########.fr        #
+#    Updated: 2021/10/26 21:20:00 by matrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ PATH_OBJS = ./objs/
 
 SRCS =		$(PATH_MDT)utils.c \
 			$(PATH_LBF)ft_atoi.c \
-			$(PATH_LBF)ft_callo.c \
+			$(PATH_LBF)ft_calloc.c \
 			$(PATH_LBF)ft_itoa.c \
 			$(PATH_LBF)ft_strlen.c
 

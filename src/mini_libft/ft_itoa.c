@@ -6,7 +6,7 @@
 /*   By: matrodri <matrodri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 15:08:54 by matrodri          #+#    #+#             */
-/*   Updated: 2021/10/21 15:42:02 by matrodri         ###   ########.fr       */
+/*   Updated: 2021/10/26 21:19:09 by matrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	size = ft_intsize(n);
-	str = ft_callo(size, sizeof(char));
+	str = ft_calloc(size, sizeof(char));
 	if (n == -2147483648)
 		return (ft_strncpy(str, "-2147483648\0", 12));
 	if (n == 0)
