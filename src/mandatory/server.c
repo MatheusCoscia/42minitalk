@@ -6,7 +6,7 @@
 /*   By: matrodri <matrodri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 12:15:05 by matrodri          #+#    #+#             */
-/*   Updated: 2021/10/26 18:59:21 by matrodri         ###   ########.fr       */
+/*   Updated: 2021/10/27 14:14:31 by matrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	send_msg(int sig)
 	static int	str;
 	static int	byte;
 
-	if (!byte)
+	if (byte == 0)
 		byte = 128;
 	if (sig == SIGUSR1)
 		str += byte;
