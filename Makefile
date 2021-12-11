@@ -6,7 +6,7 @@
 #    By: matrodri <matrodri@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/21 12:41:17 by matrodri          #+#    #+#              #
-#    Updated: 2021/10/26 21:20:00 by matrodri         ###   ########.fr        #
+#    Updated: 2021/12/11 13:29:45 by matrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,12 +43,15 @@ $(PATH_OBJS)%.o: $(PATH_SRCS)%.c
 
 
 $(CLIENT):
-		$(CC) $(CFLAGS) $(PATH_MDT)client.c $(OBJS) -o $@
+		@$(CC) $(CFLAGS) $(PATH_MDT)client.c $(OBJS) -o $@
 
 $(SERVER):
-		$(CC) $(CFLAGS) $(PATH_MDT)server.c $(OBJS) -o $@
+		@$(CC) $(CFLAGS) $(PATH_MDT)server.c $(OBJS) -o $@
 
 clean:
-	rm -rf $(PATH_OBJS) $(CLIENT) $(SERVER)
+	@rm -rf $(PATH_OBJS) $(CLIENT) $(SERVER)
+
+fclean: clean
+	@rm -rf $(NAME)
 
 re: clean all
